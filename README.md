@@ -39,11 +39,9 @@ E-Shop/
 
 ## 🌐 Live Demo
 
-Add your GitHub Pages link here after publishing the project.
+ https://sonamkale2565.github.io/amazon-clone/
 
-Example:
 
-`https://yourusername.github.io/e-shop/`
 
 ## 🎯 Purpose
 
