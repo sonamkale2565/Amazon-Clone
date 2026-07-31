@@ -1,169 +1,531 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>E-Shop | Online Shopping</title>
+    <meta name="description"
+        content="Amazon Clone - E-commerce website built with HTML, CSS and JavaScript">
+
+    <title>Amazon Clone - Online Shopping</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Header -->
+    <!-- TOP HEADER -->
     <header class="header">
 
         <div class="logo">
-            E-Shop
+            <a href="#">amazon</a>
+            <span>.clone</span>
         </div>
 
-        <div class="search">
-            <input type="text" id="searchInput" placeholder="Search products">
-            <button onclick="searchProduct()">Search</button>
+        <div class="deliver">
+            <small>Deliver to</small>
+            <strong>📍 India</strong>
+        </div>
+
+        <div class="search-area">
+
+            <select id="category">
+                <option value="all">All</option>
+                <option value="electronics">Electronics</option>
+                <option value="fashion">Fashion</option>
+                <option value="home">Home</option>
+            </select>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search products">
+
+            <button id="searchBtn">🔍</button>
+
+        </div>
+
+        <div class="account">
+            <small>Hello, Guest</small>
+            <strong>Account & Lists</strong>
+        </div>
+
+        <div class="orders">
+            <small>Returns</small>
+            <strong>& Orders</strong>
         </div>
 
         <div class="cart">
-            🛒 Cart <span id="cartCount">0</span>
+            🛒
+            <span id="cartCount">0</span>
+            <strong>Cart</strong>
         </div>
 
     </header>
 
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <a href="#">Home</a>
-        <a href="#products">Products</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+    <!-- NAVIGATION -->
+    <nav class="nav">
+
+        <a href="#">☰ All</a>
+        <a href="#products">Today's Deals</a>
+        <a href="#products">Best Sellers</a>
+        <a href="#products">Electronics</a>
+        <a href="#products">Fashion</a>
+        <a href="#products">Home & Kitchen</a>
+
     </nav>
 
 
-    <!-- Hero Section -->
+    <!-- HERO -->
     <section class="hero">
 
-        <div>
-            <h1>Welcome to E-Shop</h1>
+        <div class="hero-content">
 
-            <p>
-                Discover great products at affordable prices.
+            <p class="small-title">
+                WELCOME TO AMAZON CLONE
             </p>
 
-            <button onclick="scrollToProducts()">
+            <h1>
+                Shop Smart.<br>
+                Live Better.
+            </h1>
+
+            <p>
+                Discover quality products at great prices.
+            </p>
+
+            <button id="shopBtn">
                 Shop Now
             </button>
-        </div>
-
-    </section>
-
-
-    <!-- Products -->
-    <section id="products">
-
-        <h2>Featured Products</h2>
-
-        <div class="product-container">
-
-            <!-- Product 1 -->
-            <div class="product">
-
-                <img src="images/product1.jpg" alt="Product 1">
-
-                <h3>Wireless Headphones</h3>
-
-                <p class="price">₹1,499</p>
-
-                <button onclick="addToCart()">
-                    Add to Cart
-                </button>
-
-            </div>
-
-
-            <!-- Product 2 -->
-            <div class="product">
-
-                <img src="images/product2.jpg" alt="Product 2">
-
-                <h3>Smart Watch</h3>
-
-                <p class="price">₹2,499</p>
-
-                <button onclick="addToCart()">
-                    Add to Cart
-                </button>
-
-            </div>
-
-
-            <!-- Product 3 -->
-            <div class="product">
-
-                <img src="images/product3.jpg" alt="Product 3">
-
-                <h3>Bluetooth Speaker</h3>
-
-                <p class="price">₹999</p>
-
-                <button onclick="addToCart()">
-                    Add to Cart
-                </button>
-
-            </div>
-
-
-            <!-- Product 4 -->
-            <div class="product">
-
-                <img src="images/product4.jpg" alt="Product 4">
-
-                <h3>Gaming Mouse</h3>
-
-                <p class="price">₹799</p>
-
-                <button onclick="addToCart()">
-                    Add to Cart
-                </button>
-
-            </div>
 
         </div>
 
     </section>
 
 
-    <!-- About -->
-    <section id="about" class="info">
+    <!-- PRODUCTS -->
+    <main id="products">
 
-        <h2>About E-Shop</h2>
+        <div class="section-heading">
 
-        <p>
-            E-Shop is a demo shopping website created using
-            HTML, CSS and JavaScript for learning web development.
-        </p>
+            <p>FEATURED COLLECTION</p>
+
+            <h2>Popular Products</h2>
+
+        </div>
+
+
+        <div class="products">
+
+
+            <!-- PRODUCT 1 -->
+
+            <article class="product"
+                data-category="electronics"
+                data-name="Wireless Headphones">
+
+                <div class="image-box">
+
+                    <span class="discount">
+                        30% OFF
+                    </span>
+
+                    <img
+                        src="images/product1.jpg"
+                        alt="Wireless Headphones">
+
+                </div>
+
+                <div class="product-content">
+
+                    <span class="category">
+                        Electronics
+                    </span>
+
+                    <h3>
+                        Wireless Headphones
+                    </h3>
+
+                    <div class="rating">
+                        ★★★★☆ <span>(1,245)</span>
+                    </div>
+
+                    <p>
+                        Comfortable headphones with
+                        clear and powerful sound.
+                    </p>
+
+                    <div class="price">
+                        <strong>₹1,499</strong>
+                        <del>₹2,099</del>
+                    </div>
+
+                    <button
+                        class="add-btn"
+                        data-name="Wireless Headphones"
+                        data-price="1499">
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 2 -->
+
+            <article class="product"
+                data-category="electronics"
+                data-name="Smart Watch">
+
+                <div class="image-box">
+
+                    <span class="discount">
+                        25% OFF
+                    </span>
+
+                    <img
+                        src="images/product2.jpg"
+                        alt="Smart Watch">
+
+                </div>
+
+                <div class="product-content">
+
+                    <span class="category">
+                        Electronics
+                    </span>
+
+                    <h3>
+                        Smart Watch
+                    </h3>
+
+                    <div class="rating">
+                        ★★★★★ <span>(2,018)</span>
+                    </div>
+
+                    <p>
+                        Modern smartwatch for everyday
+                        fitness and notifications.
+                    </p>
+
+                    <div class="price">
+                        <strong>₹2,499</strong>
+                        <del>₹3,299</del>
+                    </div>
+
+                    <button
+                        class="add-btn"
+                        data-name="Smart Watch"
+                        data-price="2499">
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 3 -->
+
+            <article class="product"
+                data-category="electronics"
+                data-name="Bluetooth Speaker">
+
+                <div class="image-box">
+
+                    <span class="discount">
+                        20% OFF
+                    </span>
+
+                    <img
+                        src="images/product3.jpg"
+                        alt="Bluetooth Speaker">
+
+                </div>
+
+                <div class="product-content">
+
+                    <span class="category">
+                        Electronics
+                    </span>
+
+                    <h3>
+                        Bluetooth Speaker
+                    </h3>
+
+                    <div class="rating">
+                        ★★★★☆ <span>(845)</span>
+                    </div>
+
+                    <p>
+                        Portable speaker with rich and
+                        clear audio quality.
+                    </p>
+
+                    <div class="price">
+                        <strong>₹999</strong>
+                        <del>₹1,249</del>
+                    </div>
+
+                    <button
+                        class="add-btn"
+                        data-name="Bluetooth Speaker"
+                        data-price="999">
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 4 -->
+
+            <article class="product"
+                data-category="electronics"
+                data-name="Gaming Mouse">
+
+                <div class="image-box">
+
+                    <span class="discount">
+                        35% OFF
+                    </span>
+
+                    <img
+                        src="images/product4.jpg"
+                        alt="Gaming Mouse">
+
+                </div>
+
+                <div class="product-content">
+
+                    <span class="category">
+                        Electronics
+                    </span>
+
+                    <h3>
+                        Gaming Mouse
+                    </h3>
+
+                    <div class="rating">
+                        ★★★★☆ <span>(672)</span>
+                    </div>
+
+                    <p>
+                        Comfortable and responsive mouse
+                        for gaming and work.
+                    </p>
+
+                    <div class="price">
+                        <strong>₹799</strong>
+                        <del>₹1,199</del>
+                    </div>
+
+                    <button
+                        class="add-btn"
+                        data-name="Gaming Mouse"
+                        data-price="799">
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 5 -->
+
+            <article class="product"
+                data-category="fashion"
+                data-name="Casual Backpack">
+
+                <div class="image-box">
+
+                    <span class="discount">
+                        40% OFF
+                    </span>
+
+                    <img
+                        src="images/product5.jpg"
+                        alt="Casual Backpack">
+
+                </div>
+
+                <div class="product-content">
+
+                    <span class="category">
+                        Fashion
+                    </span>
+
+                    <h3>
+                        Casual Backpack
+                    </h3>
+
+                    <div class="rating">
+                        ★★★★☆ <span>(532)</span>
+                    </div>
+
+                    <p>
+                        Lightweight backpack for college,
+                        travel and daily use.
+                    </p>
+
+                    <div class="price">
+                        <strong>₹699</strong>
+                        <del>₹1,199</del>
+                    </div>
+
+                    <button
+                        class="add-btn"
+                        data-name="Casual Backpack"
+                        data-price="699">
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 6 -->
+
+            <article class="product"
+                data-category="home"
+                data-name="Modern Table Lamp">
+
+                <div class="image-box">
+
+                    <span class="discount">
+                        15% OFF
+                    </span>
+
+                    <img
+                        src="images/product6.jpg"
+                        alt="Modern Table Lamp">
+
+                </div>
+
+                <div class="product-content">
+
+                    <span class="category">
+                        Home
+                    </span>
+
+                    <h3>
+                        Modern Table Lamp
+                    </h3>
+
+                    <div class="rating">
+                        ★★★★★ <span>(321)</span>
+                    </div>
+
+                    <p>
+                        Minimal lamp for study, office
+                        and bedroom.
+                    </p>
+
+                    <div class="price">
+                        <strong>₹599</strong>
+                        <del>₹699</del>
+                    </div>
+
+                    <button
+                        class="add-btn"
+                        data-name="Modern Table Lamp"
+                        data-price="599">
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </main>
+
+
+    <!-- ABOUT -->
+    <section class="about">
+
+        <p>ABOUT THIS PROJECT</p>
+
+        <h2>Amazon Clone E-Commerce Website</h2>
+
+        <div>
+            <p>
+                This is a front-end e-commerce project created
+                using HTML, CSS and JavaScript. It includes
+                product search, category filtering, shopping
+                cart functionality and responsive design.
+            </p>
+        </div>
 
     </section>
 
 
-    <!-- Contact -->
-    <section id="contact" class="info">
-
-        <h2>Contact</h2>
-
-        <p>Email: support@example.com</p>
-
-    </section>
-
-
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer>
 
-        <p>© 2026 E-Shop. All Rights Reserved.</p>
+        <div class="footer-columns">
+
+            <div>
+                <h3>Amazon Clone</h3>
+                <p>
+                    A front-end e-commerce project
+                    created for learning.
+                </p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="#">Home</a>
+                <a href="#products">Products</a>
+                <a href="#products">Deals</a>
+            </div>
+
+            <div>
+                <h3>Categories</h3>
+                <a href="#products">Electronics</a>
+                <a href="#products">Fashion</a>
+                <a href="#products">Home</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Amazon Clone | Educational Project
+            </p>
+
+        </div>
 
     </footer>
+
+
+    <div id="message"></div>
 
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
+```
