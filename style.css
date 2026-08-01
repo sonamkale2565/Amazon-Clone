@@ -477,23 +477,13 @@ footer {
     }
 }
 .hero{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:50px;
-    padding:80px;
-    background:#444b53;
-}
-
-.hero-content{
-    width:45%;
-}
-
-.hero-image{
-    width:55%;
-}
-
-.hero-image img{
     width:100%;
-    border-radius:12px;
+    margin:0;
+    padding:0;
+}
+
+.hero img{
+    width:100%;
+    height:auto;
+    display:block;
 }
