@@ -477,25 +477,23 @@ footer {
     }
 }
 .hero{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 80px 8%;
-    background: #3b3f46;
-    color: white;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+    padding:80px;
+    background:#444b53;
 }
 
 .hero-content{
-    width: 45%;
+    width:45%;
 }
 
 .hero-image{
-    width: 50%;
-    text-align: right;
+    width:55%;
 }
 
 .hero-image img{
-    width: 100%;
-    max-width: 550px;
-    border-radius: 10px;
+    width:100%;
+    border-radius:12px;
 }
